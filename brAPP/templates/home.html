@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+        <style>
+            h1,h2{
+                font-family: 'East Sea Dokdo', cursive;
+                text-align:center;
+            }
+            div{
+                text-align:center;
+            }
+            body{
+                margin-top: 200px;
+            }
+            input {
+                font-family: 'East Sea Dokdo', cursive;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>'가위 바위 보 게임'</h1>   
+            <h2> 👉 원하는 버튼을 눌러주세요! </h2> 
+            <form action="{% url 'result' %}">
+                <input type="submit" name="input" value="scissors">
+                <input type="submit" name="input" value="rock">
+                <input type="submit" name="input" value="paper">
+            </form>
+        </div>
+    </body>
+</html>

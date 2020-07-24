@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>RESULT</title>
+        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+        <style>
+            body{
+                margin-top: 200px;
+                }
+            h1,h2{
+                font-family: 'East Sea Dokdo', cursive;
+                text-align:center;
+              }
+            div{
+                font-family: 'East Sea Dokdo', cursive;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            {% if you == com %}
+                <h1>비겼어요!</h1>
+            {% elif com == "scissors" and you == "rock" or com == "rock" and you == "paper" or  com == "paper" and you == "scissors" %}
+                <h1>이겼어요:)</h1>
+            {% else %}
+                <h1>아쉬워요:(</h1>
+            {% endif %}
+            <h2>나 : {{you}}   vs   상대 : {{com}}</h2>
+            <a href="{% url 'home' %}">다시 게임해요💖</a> 
+        </div>
+    </body>
+</html>
